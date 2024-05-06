@@ -1,15 +1,25 @@
 Package: modelgrid
-Title: A Framework for Creating, Managing and Training Multiple Caret Models
-Version: 1.1.1.0
-Authors@R: person("Lars", "Kjeldgaard", email = "lars_kjeldgaard@hotmail.com", role = c("aut", "cre"))
-Description: A minimalistic but flexible framework that facilitates the creation,
-    management and training of multiple 'caret' models. A model grid consists of
-    two components: (1) a set of settings that is shared by all models by 
-    default, and (2) specifications that apply only to the individual models.
-    When the model grid is trained, model and training specifications are first 
-    consolidated from the shared and the model specific settings into complete
-    'caret' model configurations. These models are then trained with the 'train' 
-    function from the 'caret' package.
+Title: A Framework for Creating, Managing and Training Multiple 'caret' Models
+Version: 1.2.0
+Authors@R: 
+  c(person(given = "Lars",
+           family = "Kjeldgaard",
+           email = "lars_kjeldgaard@hotmail.com",
+           role = c("aut")),
+    person(given = "Angel",
+           family = "Robles",
+           comment = c(ORCID = "0000-0002-4674-4270"),
+           email = "a.l.robles.fernandez@gmail.com",
+           role = c("cre"))
+           )
+Description: A minimalistic but flexible framework that facilitates the
+    creation, management and training of multiple 'caret' models. A model grid
+    consists of two components, (1) a set of settings that is shared by all
+    models by default, and (2) specifications that apply only to the individual
+    models. When the model grid is trained, model and training specifications are
+    first consolidated from the shared and the model specific settings into
+    complete 'caret' model configurations. These models are then trained with
+    the 'train()' function from the 'caret' package.
 URL: https://github.com/smaakage85/modelgrid
 Depends: R (>= 3.4.0)
 License: MIT + file LICENSE
@@ -18,13 +28,10 @@ LazyData: true
 Imports: caret,
     purrr,
     dplyr,
-    magrittr,
-    ggplot2,
-    lattice
-RoxygenNote: 6.1.0
+    magrittr
+RoxygenNote: 7.2.3
 Suggests: testthat,
     knitr,
     rmarkdown,
-    recipes,
-    randomForest
+    recipes
 VignetteBuilder: knitr
